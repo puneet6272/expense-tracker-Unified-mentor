@@ -1,0 +1,816 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 9px;
+}
+
+
+.plus {
+  border: 1.5px solid rgb(41, 186, 41);
+
+  h4 {
+    color: green;
+  }
+
+  span {
+    i {
+      color: rgb(132, 210, 14);
+    }
+  }
+}
+
+.minus {
+  border: 1.5px solid rgb(190, 40, 20);
+
+  h4 {
+    color: rgb(194, 11, 11);
+  }
+
+  span {
+    i {
+      color: rgb(210, 14, 14);
+    }
+  }
+}
+
+
+body {
+  font-family: "popines", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // min-height: 100vh;
+  height: 95vh;
+  background: #1a1e23;
+}
+
+
+.container {
+  background-image: linear-gradient(to bottom right, #FDFCFB, #E2D1C3);
+  width: 70rem;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 94%;
+  border-radius: 1rem;
+
+
+  .expense_title {
+    font-size: 5.5rem;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: black;
+  }
+
+  .cen {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .balance {
+    width: 60rem;
+    height: 12rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 1rem;
+
+
+    h1 {
+      font-size: 6rem;
+      font-weight: bolder;
+
+    }
+
+    h4 {
+      font-size: 3.4rem;
+      font-weight: bold;
+
+    }
+  }
+
+  .inc-exp-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .income {
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 30rem;
+      height: 12rem;
+      background: white;
+      padding: 0 3rem 0 3rem;
+      border: 0.5rem solid rgb(123, 203, 4);
+
+      h2 {
+        font-size: 4rem;
+        color: green;
+      }
+
+      h4 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .expense {
+      border-radius: 1rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 30rem;
+      height: 12rem;
+      background: white;
+      padding: 0 3rem 0 3rem;
+      border: 0.5rem solid rgb(232, 11, 11);
+
+      h2 {
+        font-size: 4rem;
+        color: rgb(202, 15, 15);
+      }
+
+      h4 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .history {
+    .title-history {
+      font-size: 5rem;
+      padding-bottom: 1.2rem;
+    }
+
+    .history-box {
+      height: 31rem;
+      overflow: hidden;
+
+      &:hover {
+        overflow-y: scroll;
+      }
+
+      li {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        list-style: none;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.3rem;
+        border-radius: 1rem;
+        margin-bottom: 1.25rem;
+
+        h4 {
+          font-size: 2rem;
+        }
+
+        span {
+          font-size: 2rem;
+
+          i {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .transcation {
+    .transaction-title {
+      margin-top: 1.5rem;
+      font-size: 3.5rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .transection-form {
+      display: flex;
+      flex-direction: column;
+
+      .input-section{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      input {
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+        width: 48%;
+      }
+
+      input::placeholder {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+
+      #date{
+        width: 100%;
+      }
+
+      button {
+        background: #000;
+        padding: 1.5rem 3.5rem;
+        font-size: 3rem;
+        font-weight: bolder;
+        color: white;
+        border-radius: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:350px) and (max-width:390px) {
+
+  .container {
+    border: 4px solid blue;
+    background-image: linear-gradient(to bottom right, #FDFCFB, #E2D1C3);
+
+    // width: 95%;
+    width: 33rem;
+    padding: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 95%;
+    // border: 2px solid rgb(55, 255, 0);
+    border-radius: 1rem;
+
+
+    .expense_title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      text-align: center;
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+      color: black;
+    }
+
+    .cen {
+      // border: 2px solid red;
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .balance {
+      width: 40rem;
+      height: 8.25rem;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      border-radius: 1rem;
+
+
+      h1 {
+        font-size: 3rem;
+        font-weight: bolder;
+
+      }
+
+      h4 {
+        font-size: 1.75rem;
+        font-weight: bold;
+
+      }
+    }
+
+    .inc-exp-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+
+      .income {
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 15rem;
+        height: 8rem;
+        background: white;
+        padding: 0 2rem;
+        border: 0.5rem solid rgb(123, 203, 4);
+
+        h2 {
+          font-size: 2rem;
+          color: green;
+        }
+
+        h4 {
+          font-size: 1.80rem;
+          text-transform: uppercase;
+        }
+      }
+
+      .expense {
+        border-radius: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 15rem;
+        height: 8rem;
+        background: white;
+        padding: 0 2rem;
+        border: 0.5rem solid rgb(232, 11, 11);
+
+        h2 {
+          font-size: 2rem;
+          color: rgb(202, 15, 15);
+        }
+
+        h4 {
+          font-size: 1.80rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .history {
+      .title-history {
+        font-size: 2.5rem;
+        font-weight: 700;
+        padding-bottom: 1rem;
+      }
+
+      .history-box {
+        height: 18rem;
+        overflow: hidden;
+
+        &:hover {
+          overflow-y: scroll;
+        }
+
+        li {
+          font-size: 0.8rem;
+          font-weight: bolder;
+          width: 100%;
+          list-style: none;
+          background-color: #fff;
+          display: flex;
+          justify-content: space-between;
+          padding: 0.8rem;
+          border-radius: 0.75rem;
+          margin-bottom: 0.75rem;
+
+          h4 {
+            font-size: 1rem;
+          }
+
+          span {
+            font-size: 1.5rem;
+
+            i {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .transcation {
+      .transaction-title {
+        margin-top: 0.75rem;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.6rem;
+      }
+
+      .transection-form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+          border-radius: 1rem;
+          padding: 0.75rem;
+          margin-bottom: 0.75rem;
+          font-size: 1.6rem;
+          font-weight: bold;
+        }
+
+        input::placeholder {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+
+        button {
+          background: #000;
+          padding: 1.5rem 3.5rem;
+          font-size: 2rem;
+          font-weight: bolder;
+          color: white;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media screen and (min-width:390px) and (max-width:767px) {
+
+
+  .container {
+   background-image: linear-gradient(to bottom right, #FDFCFB, #E2D1C3);
+
+    width: 38rem;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 95%;
+    border: 2px solid red;
+    border-radius: 1rem;
+
+
+    .expense_title {
+      font-size: 3rem;
+      font-weight: 800;
+      text-align: center;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      color: black;
+    }
+
+    .cen {
+      // border: 2px solid red;
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .balance {
+      width: 40rem;
+      height: 12rem;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      border-radius: 1rem;
+
+
+      h1 {
+        font-size: 4rem;
+        font-weight: bolder;
+
+      }
+
+      h4 {
+        font-size: 2.4rem;
+        font-weight: bold;
+
+      }
+    }
+
+    .inc-exp-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+
+      .income {
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 17rem;
+        height: 10rem;
+        background: white;
+        padding: 0 2rem 0 2rem;
+        border: 0.5rem solid rgb(123, 203, 4);
+
+        h2 {
+          font-size: 2.75rem;
+          color: green;
+        }
+
+        h4 {
+          font-size: 2rem;
+          text-transform: uppercase;
+        }
+      }
+
+      .expense {
+        border-radius: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 17rem;
+        height: 10rem;
+        background: white;
+        padding: 0 2rem 0 2rem;
+        border: 0.5rem solid rgb(232, 11, 11);
+
+        h2 {
+          font-size: 2.75rem;
+          color: rgb(202, 15, 15);
+        }
+
+        h4 {
+          font-size: 2rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .history {
+      .title-history {
+        font-size: 4rem;
+        font-weight: 700;
+        padding-bottom: 1.15rem;
+      }
+
+      .history-box {
+        height: 22rem;
+        overflow: hidden;
+
+        &:hover {
+          overflow-y: scroll;
+        }
+
+        li {
+          font-size: 1.25rem;
+          font-weight: bolder;
+          list-style: none;
+          background-color: #fff;
+          display: flex;
+          justify-content: space-between;
+          padding: 1rem;
+          border-radius: 1rem;
+          margin-bottom: 1rem;
+
+          h4 {
+            font-size: 2rem;
+          }
+
+          span {
+            font-size: 2rem;
+
+            i {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .transcation {
+      .transaction-title {
+        margin-top: 1rem;
+        font-size: 2.6rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .transection-form {
+        display: flex;
+        flex-direction: column;
+
+        // #arr{
+        //   border: 2px solid red;
+        // }
+
+        input {
+          border-radius: 1rem;
+          padding: 1.15rem;
+          margin-bottom: 1rem;
+          font-size: 2rem;
+          font-weight: bold;
+        }
+
+        input::placeholder {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+
+        button {
+          background: #000;
+          padding: 1.25rem 3rem;
+          font-size: 2.5rem;
+          font-weight: bolder;
+          color: white;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width:1023px) {
+
+
+
+  .container {
+    // border: 2px solid red;
+    // background: rgb(137, 136, 136);
+    // background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+    background-image: linear-gradient(to bottom right, #FDFCFB, #E2D1C3);
+
+    // width: 95%;
+    width: 80%m;
+    padding: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 95%;
+    // border: 3px solid rgb(0, 81, 255);
+    border-radius: 1rem;
+
+
+    .expense_title {
+      font-size: 5rem;
+      font-weight: 800;
+      text-align: center;
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+      color: black;
+    }
+
+    .cen {
+      // border: 2px solid red;
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .balance {
+      width: 60rem;
+      height: 16rem;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      border-radius: 1rem;
+
+
+      h1 {
+        font-size: 6rem;
+        font-weight: bolder;
+
+      }
+
+      h4 {
+        font-size: 3.5rem;
+        font-weight: bold;
+
+      }
+    }
+
+    .inc-exp-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+      .income {
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 33rem;
+        height: 15rem;
+        background: white;
+        padding: 0 2rem 0 2rem;
+        border: 0.5rem solid rgb(123, 203, 4);
+
+        h2 {
+          font-size: 4rem;
+          color: green;
+        }
+
+        h4 {
+          font-size: 3rem;
+          text-transform: uppercase;
+        }
+      }
+
+      .expense {
+        border-radius: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 33rem;
+        height: 15rem;
+        background: white;
+        padding: 0 2rem 0 2rem;
+        border: 0.5rem solid rgb(232, 11, 11);
+
+        h2 {
+          font-size: 4rem;
+          color: rgb(202, 15, 15);
+        }
+
+        h4 {
+          font-size: 3rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .history {
+      .title-history {
+        font-size: 6rem;
+        font-weight: 700;
+        padding-bottom: 1.5rem;
+      }
+
+      .history-box {
+        height: 25rem;
+        overflow: hidden;
+
+        &:hover {
+          overflow-y: scroll;
+        }
+
+        li {
+          font-size: 2rem;
+          font-weight: bolder;
+          list-style: none;
+          background-color: #fff;
+          display: flex;
+          justify-content: space-between;
+          padding: 1.5rem;
+          border-radius: 1rem;
+          margin-bottom: 1rem;
+
+          h4 {
+            font-size: 3rem;
+          }
+
+          span {
+            font-size: 3rem;
+
+            i {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .transcation {
+      .transaction-title {
+        margin-top: 1.25rem;
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1.25rem;
+      }
+
+      .transection-form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+          border-radius: 1rem;
+          padding: 1.25rem;
+          margin-bottom: 1rem;
+          font-size: 3rem;
+          font-weight: bold;
+        }
+
+        input::placeholder {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+
+        button {
+          background: #000;
+          padding: 1.5rem 3.5rem;
+          font-size: 2.5rem;
+          font-weight: bolder;
+          color: white;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}

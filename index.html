@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- font awasome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <h1 class="expense_title"> Expense tracker</h1>
+
+        <!-- balance  -->
+        <div class="cen">
+            <div class="balance">
+                <h1 id="balance"></h1>
+                <h4>current Balance</h4>
+            </div>
+        </div>
+
+        <!-- income and expense container -->
+        <div class="inc-exp-container">
+            <div class="income">
+                <h2 id="income">$ 00.0 <i class="fa-solid fa-sort-up"></i></h2>
+                <h4>Income</h4>
+            </div>
+            <div class="expense">
+                <h2 id="expense">$ 00.0 <i class="fa-solid fa-sort-down"></i></h2>
+                <h4>Expense</h4>
+            </div>
+        </div>
+
+        <!-- history -->
+        <div class="history">
+            <h2 class="title-history">History</h2>
+            <ul class="history-box" id="list">
+                <li class="plus">
+                    <h4>Payments</h4>
+                    <span>+$100
+                        <i class="fa-solid fa-sort-up"></i>
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- Add Transaction section -->
+
+        <div class="transcation">
+            <h2 class="transaction-title">Add new Transaction</h2>
+
+            <form action="#" class="transection-form" id="form">
+                    <div class="input-section">
+                        <input type="text" id="text" class="inp-text" placeholder="Enter text here">
+                        <input type="number" id="amount" class="inp-number" placeholder="Enter amount (-100 expense)">
+                    </div>
+                    <input type="date" name="" id="date">
+
+
+                <button class="button-27" id="btn" role="button">Add Transection</button>
+
+            </form>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
